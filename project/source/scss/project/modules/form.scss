@@ -62,7 +62,7 @@ form {
 	}
 
 	.tooltip {
-		@include transition(opacity 200ms);
+		//@include transition(opacity 200ms);
 		opacity: 0;
 		cursor: pointer;
 
