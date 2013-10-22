@@ -1,0 +1,178 @@
+/*
+File: ie.scss
+Outputs: ie.css
+
+Project: RED
+
+Description:
+	IE styles
+
+Requires:
+	- Sass <http://sass-lang.com/>
+	- Compass <http://compass-style.org/>
+
+*/
+/*
+File: _chrome-frame.scss
+
+Description:
+	Chrome Frame styles
+
+Requires:
+	- Sass
+	- Compass
+
+*/
+/* line 24, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+.chromeFrameOverlayCloseBar {
+  display: none;
+}
+
+/* line 28, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  letter-spacing: 0;
+  z-index: 1000;
+  font: bold Arial;
+  color: #bbc3c6;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBFMTJBRTU5RDQzMTFFMTlGMENDQzkyQkUzMDNDQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzBFMTJBRTY5RDQzMTFFMTlGMENDQzkyQkUzMDNDQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3MEUxMkFFMzlENDMxMUUxOUYwQ0NDOTJCRTMwM0NBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3MEUxMkFFNDlENDMxMUUxOUYwQ0NDOTJCRTMwM0NBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pgg/DVMAAACmSURBVHja7NEBDQAACMOwg3+d6MAGIZ2EtZJMdKa2AIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACIiAABEQIAICRECACAgQAREQIAICREC+twIMAJBKAa4IeftOAAAAAElFTkSuQmCC');
+}
+/* line 40, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 44, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .cf-wrap {
+  margin-top: -203.5px;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 407px;
+  position: absolute;
+}
+/* line 55, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .cf-content-wrap {
+  padding: 0 20px 20px;
+  margin: 0 auto;
+  width: 920px;
+  border: 1px solid;
+  overflow: hidden;
+  background: #111111;
+}
+/* line 64, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+/* line 69, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame h1 {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* line 76, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .callout {
+  float: left;
+  width: 558px;
+}
+/* line 80, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .callout > a {
+  float: right;
+  margin: 0 5px 5px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 0 17px;
+  height: 30px;
+  line-height: 30px;
+  background: #111111;
+  border: 1px solid;
+}
+/* line 92, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame h2 {
+  float: left;
+  margin: 0 0 30px;
+  font-size: 28px;
+}
+/* line 98, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .content {
+  padding: 0;
+}
+/* line 101, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .content p {
+  float: left;
+  padding-right: 20px;
+  width: 315px;
+}
+/* line 107, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .content .callout {
+  padding-left: 20px;
+  border-left: 1px solid;
+}
+/* line 113, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices {
+  clear: both;
+}
+/* line 116, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices h3, #chrome-frame .choices ul {
+  float: left;
+}
+/* line 120, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices h3 {
+  text-align: left;
+}
+/* line 124, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices ul {
+  float: right;
+  margin-top: -13px;
+}
+/* line 129, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices li {
+  margin-left: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 134, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices a {
+  width: 43px;
+  height: 43px;
+  display: block;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  border: 1px solid;
+}
+/* line 144, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices .chrome {
+  background: url('../img/global/icon-chrome-frame-chrome.png?1374882501');
+}
+/* line 148, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices .safari {
+  background: url('../img/global/icon-chrome-frame-safari.png?1374882501');
+}
+/* line 152, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame .choices .firefox {
+  background: url('../img/global/icon-chrome-frame-firefox.png?1374882501');
+}
+/* line 157, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame.hidden {
+  display: none;
+}
+/* line 161, ../scss/caboose/rosy/google-chrome-frame/_chrome-frame.scss */
+#chrome-frame.lt-ie9 {
+  background: #111111;
+}

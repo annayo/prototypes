@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form class="form-signup" action="#" novalidate role="form">
+	<label>
+		<strong>Name</strong>
+		<input id="name" name="name" type="text" placeholder="Name" maxlength="255" pattern="alpha" required />
+	</label>
+	<label>
+		<strong>Email</strong>
+		<input id="email" name="email" type="email" placeholder="Email" maxlength="255" pattern="email" required />
+	</label>
+	<label>
+		<strong>File</strong>
+		<input id="file" name="file" type="file" accept=".jpg,.png,.gif" />
+	</label>
+	<label>
+		<strong>Telephone</strong>
+		<input id="telephone" name="telephone" type="tel" placeholder="Telephone" pattern="tel" required />
+	</label>
+	<label>
+		<strong>Date</strong>
+		<input id="date" name="date" type="date" required />
+	</label>
+	<label>
+		<strong>Password</strong>
+		<input id="password" name="password" type="password" pattern="password" required />
+	</label>
+	<label>
+		<strong>Re-type Password</strong>
+		<input id="match-password" name="match-password" type="password" pattern="match" required />
+	</label>
+	<label>
+		<strong>Selections</strong>
+		<select required>
+			<option value="" selected>Nope</option>
+			<option value="one">One</option>
+			<option value="two">Two</option>
+			<option value="three">Three</option>
+			<option value="four">Four</option>
+			<option value="five">Five</option>
+		</select>
+	</label>
+	<fieldset>
+		<legend>Options</legend>
+		<label class="pull-inline">
+			<strong>One</strong>
+			<input type="checkbox" name="options" value="one" checked required />
+		</label>
+		<label class="pull-inline">
+			<strong>Two</strong>
+			<input type="checkbox" name="options" value="two" />
+		</label>
+		<label class="pull-inline">
+			<strong>Three</strong>
+			<input type="checkbox" name="options" value="three" />
+		</label>
+	</fieldset>
+	<fieldset>
+		<legend>Choices</legend>
+		<label class="pull-inline">
+			<strong>One</strong>
+			<input type="radio" name="choices" value="one" checked required />
+		</label>
+		<label class="pull-inline">
+			<strong>Two</strong>
+			<input type="radio" name="choices" value="two" />
+		</label>
+		<label class="pull-inline">
+			<strong>Three</strong>
+			<input type="radio" name="choices" value="three" />
+		</label>
+	</fieldset>
+	<div class="btn-group">
+		<span class="btn btn-link">Clear</span>
+		<input type="submit" class="btn btn-submit" value="Send" />
+	</div>
+</form>
+
+{% endblock content %}

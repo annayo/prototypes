@@ -1,0 +1,13 @@
+{
+	"name": "rosy-google-chrome-frame",
+	"description": "",
+	"version": "1.0.0",
+	"dependencies": {
+		"rosy-oxblood": "https://github.com/rosy-components/rosy-oxblood/archive/1.0.0.tar.gz"
+	},
+	"scripts": {
+		"install" : "bower install --dev",
+		"browser": "bunyip -f test/runner.html local -l 'safari|chrome|firefox'",
+		"test": "npm test rosy-oxblood"
+	}
+}

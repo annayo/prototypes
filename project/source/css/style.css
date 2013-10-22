@@ -1,0 +1,324 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700|Vollkorn);
+/*
+File: style.scss
+Outputs: style.css
+
+Project: RED
+
+Description:
+	Global styles
+
+Requires:
+	- Sass <http://sass-lang.com/>
+	- Compass <http://compass-style.org/>
+
+Requires:
+	- <caboose/_caboose.scss>
+	- <_site-settings.scss>
+
+*/
+/* line 1, ../scss/caboose/caboose/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 22, ../scss/caboose/caboose/_reset.scss */
+article, aside, details, summary, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, ../scss/caboose/caboose/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 30, ../scss/caboose/caboose/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 34, ../scss/caboose/caboose/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 39, ../scss/caboose/caboose/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 44, ../scss/caboose/caboose/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 23, ../scss/caboose/caboose/_exports.scss */
+#caboose {
+  -webkit-animation-duration: 10s;
+  -moz-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -moz-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+/* line 5, ../scss/project/modules/form.scss */
+form {
+  width: 30%;
+  margin: 20px auto;
+  position: relative;
+}
+/* line 11, ../scss/project/modules/form.scss */
+form label,
+form fieldset {
+  color: #555;
+  display: block;
+  position: relative;
+  margin: 2px 0;
+  padding: 6px 12px;
+}
+/* line 19, ../scss/project/modules/form.scss */
+form label strong,
+form label legend,
+form fieldset strong,
+form fieldset legend {
+  font-family: 'Lobster Two', cursive;
+  font-size: 1.125em;
+  line-height: 1.375em;
+}
+/* line 26, ../scss/project/modules/form.scss */
+form label label strong,
+form label input,
+form fieldset label strong,
+form fieldset input {
+  font-family: 'Vollkorn', serif;
+  font-size: 0.875em;
+}
+/* line 32, ../scss/project/modules/form.scss */
+form label input,
+form label select,
+form fieldset input,
+form fieldset select {
+  border: 1px solid #ddd;
+}
+/* line 36, ../scss/project/modules/form.scss */
+form label input,
+form fieldset input {
+  color: #555;
+  display: block;
+  background-color: #fff;
+  border-radius: 4px;
+  line-height: 1.5em;
+  padding: 5px;
+  width: 100%;
+}
+/* line 49, ../scss/project/modules/form.scss */
+form label.alert input,
+form label.alert select,
+form fieldset.alert input,
+form fieldset.alert select {
+  border-color: #ff0000;
+}
+/* line 55, ../scss/project/modules/form.scss */
+form .pull-inline {
+  display: inline;
+}
+/* line 58, ../scss/project/modules/form.scss */
+form .pull-inline input {
+  display: inline;
+  width: auto;
+}
+/* line 64, ../scss/project/modules/form.scss */
+form .tooltip {
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  transition: opacity 200ms;
+  opacity: 0;
+  cursor: pointer;
+}
+/* line 69, ../scss/project/modules/form.scss */
+form .tooltip span {
+  color: #ff0000;
+  font-family: 'Ubuntu Mono', sans-serif;
+  font-size: 0.5625em;
+  background: #fff;
+  padding: 4px;
+}
+/* line 77, ../scss/project/modules/form.scss */
+form .tooltip.hide {
+  opacity: 0;
+}
+/* line 81, ../scss/project/modules/form.scss */
+form .tooltip.show {
+  opacity: 1;
+}
+/* line 86, ../scss/project/modules/form.scss */
+form .btn {
+  font-family: 'Lobster Two', cursive;
+  background-color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 100%;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #adadad;
+  border-radius: 4px;
+  user-select: none;
+}
+/* line 100, ../scss/project/modules/form.scss */
+form .btn:hover {
+  background-color: #ebebeb;
+}
+/* line 105, ../scss/project/modules/form.scss */
+form .btn-link {
+  font-weight: normal;
+  color: #428bca;
+  border: none;
+}
+/* line 110, ../scss/project/modules/form.scss */
+form .btn-link:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* line 116, ../scss/project/modules/form.scss */
+form .btn-group {
+  border-top: 1px solid #ebebeb;
+  margin: 10px 0 0;
+  padding: 10px 0 0;
+  text-align: right;
+}
+
+/* line 1, ../scss/project/modules/carousel.scss */
+.carousel {
+  background: #333;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 11, ../scss/project/modules/carousel.scss */
+.carousel .carousel-list {
+  clear: both;
+  left: 70px;
+  list-style: none;
+  padding: 0 59px 0 0;
+  position: absolute;
+  top: 15px;
+  width: 10000px;
+}
+/* line 20, ../scss/project/modules/carousel.scss */
+.carousel .carousel-list.render {
+  visibility: visible;
+}
+/* line 24, ../scss/project/modules/carousel.scss */
+.carousel .carousel-list li {
+  display: block;
+  float: left;
+  height: 35px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+/* line 33, ../scss/project/modules/carousel.scss */
+.carousel .carousel-list li.blank {
+  text-indent: -9999px;
+  visibility: hidden;
+}
+/* line 38, ../scss/project/modules/carousel.scss */
+.carousel .carousel-list li.loading {
+  background-color: #E9E9E9;
+}
+/* line 43, ../scss/project/modules/carousel.scss */
+.carousel .carousel-list img {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+}
+/* line 52, ../scss/project/modules/carousel.scss */
+.carousel .controls {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: auto;
+  z-index: 1;
+}
+/* line 60, ../scss/project/modules/carousel.scss */
+.carousel span.controls {
+  border: 1px solid #585e61;
+  background: #3e3e3e;
+  color: #fff;
+  cursor: pointer;
+  font-size: 9px;
+  position: absolute;
+  top: 15px;
+  overflow: visible;
+  line-height: 39px;
+  width: 39px;
+  height: 39px;
+  text-indent: 0;
+  text-align: center;
+  z-index: 2;
+}
+/* line 76, ../scss/project/modules/carousel.scss */
+.carousel span.controls.prev {
+  left: 10px;
+  text-indent: -1px;
+}
+/* line 81, ../scss/project/modules/carousel.scss */
+.carousel span.controls.next {
+  right: 10px;
+  text-indent: 1px;
+}
+/* line 86, ../scss/project/modules/carousel.scss */
+.carousel span.controls.disabled {
+  color: #585e61;
+  cursor: default;
+}
+/* line 92, ../scss/project/modules/carousel.scss */
+.carousel ul.controls {
+  left: 50%;
+  position: relative;
+  top: 355px;
+}
+/* line 97, ../scss/project/modules/carousel.scss */
+.carousel ul.controls li {
+  background: #cecece;
+  border-radius: 10px;
+  cursor: pointer;
+  float: left;
+  height: 10px;
+  margin-right: 3px;
+  width: 10px;
+}
+/* line 106, ../scss/project/modules/carousel.scss */
+.carousel ul.controls li.active {
+  background: #f7933b;
+}
+
+/* line 115, ../scss/project/modules/carousel.scss */
+.no-js .carousel-list {
+  margin: 10px auto 0;
+  overflow: hidden;
+  position: static;
+  visibility: visible;
+  width: 930px;
+}

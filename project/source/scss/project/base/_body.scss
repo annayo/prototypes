@@ -1,0 +1,17 @@
+// File: project/base/globals
+// Imported by: style.scss
+//
+// Description:
+// 	General global styling
+//
+// Requires:
+// 	- Sass
+// 	- Compass
+
+html {}
+
+body {
+	@extend %debug !optional;
+}
+
+a {}

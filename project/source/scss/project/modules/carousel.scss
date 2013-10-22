@@ -1,0 +1,122 @@
+.carousel {
+	$height: 35px;
+	$width: 734px;
+	$inView: 2;
+
+	background: #333;
+	height: 70px;
+	overflow: hidden;
+	position: relative;
+
+	.carousel-list {
+		clear: both;
+		left: 70px;
+		list-style: none;
+		padding: 0 59px 0 0;
+		position: absolute;
+		top: 15px;
+		width: 10000px;
+
+		&.render {
+			visibility: visible;
+		}
+
+		li {
+			display: block;
+			float: left;
+			height: $height;
+			position: relative;
+			overflow: hidden;
+			padding: 0 20px;
+			//width: ($width/$inView);
+
+			&.blank {
+				text-indent: -9999px;
+				visibility: hidden;
+			}
+
+			&.loading {
+				background-color: #E9E9E9;
+			}
+		}
+
+		img {
+			top: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			position: absolute;
+		}
+	}
+
+	.controls {
+		display: block;
+		overflow: hidden;
+		text-indent: -9999px;
+		width: auto;
+		z-index: 1;
+	}
+
+	span.controls {
+		border: 1px solid #585e61;
+		background: #3e3e3e;
+		color: #fff;
+		cursor: pointer;
+		font-size: 9px;
+		position: absolute;
+		top: 15px;
+		overflow: visible;
+		line-height: 39px;
+		width: 39px;
+		height: 39px;
+		text-indent: 0;
+		text-align: center;
+		z-index: 2;
+
+		&.prev {
+			left: 10px;
+			text-indent: -1px;
+		}
+
+		&.next {
+			right: 10px;
+			text-indent: 1px;
+		}
+
+		&.disabled {
+			color: #585e61;
+			cursor: default;
+		}
+	}
+
+	ul.controls {
+		left: 50%;
+		position: relative;
+		top: 355px;
+
+		li {
+			background: #cecece;
+			border-radius: 10px;
+			cursor: pointer;
+			float: left;
+			height: 10px;
+			margin-right: 3px;
+			width: 10px;
+
+			&.active {
+				background: #f7933b;
+			}
+		}
+	}
+}
+
+.no-js {
+
+	.carousel-list {
+		margin: 10px auto 0;
+		overflow: hidden;
+		position: static;
+		visibility: visible;
+		width: 930px;
+	}
+}

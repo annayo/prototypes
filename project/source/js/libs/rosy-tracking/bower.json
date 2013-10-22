@@ -1,0 +1,17 @@
+{
+  "name": "rosy-tracking",
+  "version": "0.0.0",
+  "main": [],
+  "dependencies": {
+    "rosy": "https://github.com/ff0000/rosy.git#~3.x"
+  },
+  "gitHead": "019fcb590e2c8a4b95ea3c4b397d19b01643c2c4",
+  "_id": "rosy-tracking@1.0.0",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "commit": "019fcb590e2c8a4b95ea3c4b397d19b01643c2c4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosy-components/rosy-tracking.git"
+  }
+}

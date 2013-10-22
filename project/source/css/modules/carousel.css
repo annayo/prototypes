@@ -1,0 +1,116 @@
+/* line 1, ../../scss/project/modules/carousel.scss */
+.carousel {
+  background: #333;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 11, ../../scss/project/modules/carousel.scss */
+.carousel .carousel-list {
+  clear: both;
+  left: 70px;
+  list-style: none;
+  padding: 0 59px 0 0;
+  position: absolute;
+  top: 15px;
+  width: 10000px;
+}
+/* line 20, ../../scss/project/modules/carousel.scss */
+.carousel .carousel-list.render {
+  visibility: visible;
+}
+/* line 24, ../../scss/project/modules/carousel.scss */
+.carousel .carousel-list li {
+  display: block;
+  float: left;
+  height: 35px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+/* line 33, ../../scss/project/modules/carousel.scss */
+.carousel .carousel-list li.blank {
+  text-indent: -9999px;
+  visibility: hidden;
+}
+/* line 38, ../../scss/project/modules/carousel.scss */
+.carousel .carousel-list li.loading {
+  background-color: #E9E9E9;
+}
+/* line 43, ../../scss/project/modules/carousel.scss */
+.carousel .carousel-list img {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+}
+/* line 52, ../../scss/project/modules/carousel.scss */
+.carousel .controls {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: auto;
+  z-index: 1;
+}
+/* line 60, ../../scss/project/modules/carousel.scss */
+.carousel span.controls {
+  border: 1px solid #585e61;
+  background: #3e3e3e;
+  color: #fff;
+  cursor: pointer;
+  font-size: 9px;
+  position: absolute;
+  top: 15px;
+  overflow: visible;
+  line-height: 39px;
+  width: 39px;
+  height: 39px;
+  text-indent: 0;
+  text-align: center;
+  z-index: 2;
+}
+/* line 76, ../../scss/project/modules/carousel.scss */
+.carousel span.controls.prev {
+  left: 10px;
+  text-indent: -1px;
+}
+/* line 81, ../../scss/project/modules/carousel.scss */
+.carousel span.controls.next {
+  right: 10px;
+  text-indent: 1px;
+}
+/* line 86, ../../scss/project/modules/carousel.scss */
+.carousel span.controls.disabled {
+  color: #585e61;
+  cursor: default;
+}
+/* line 92, ../../scss/project/modules/carousel.scss */
+.carousel ul.controls {
+  left: 50%;
+  position: relative;
+  top: 355px;
+}
+/* line 97, ../../scss/project/modules/carousel.scss */
+.carousel ul.controls li {
+  background: #cecece;
+  border-radius: 10px;
+  cursor: pointer;
+  float: left;
+  height: 10px;
+  margin-right: 3px;
+  width: 10px;
+}
+/* line 106, ../../scss/project/modules/carousel.scss */
+.carousel ul.controls li.active {
+  background: #f7933b;
+}
+
+/* line 115, ../../scss/project/modules/carousel.scss */
+.no-js .carousel-list {
+  margin: 10px auto 0;
+  overflow: hidden;
+  position: static;
+  visibility: visible;
+  width: 930px;
+}

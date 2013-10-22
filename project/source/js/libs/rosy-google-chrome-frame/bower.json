@@ -1,0 +1,22 @@
+{
+  "name": "rosy-google-chrome-frame",
+  "version": "0.0.0",
+  "main": [
+    "./ChromeFrame.js"
+  ],
+  "dependencies": {
+    "rosy": "https://github.com/ff0000/rosy.git#~3.x",
+    "rosy-tracking": "https://github.com/rosy-components/rosy-tracking.git",
+    "chrome-frame": "http://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"
+  },
+  "gitHead": "bc9b1f7346751a2317f31d83deef61baf5c2250c",
+  "readme": "### Using the Google Chrome Frame module\n\n1. Require ChromeFrame.js in your index file. For best results, wrap in an IE conditional (Note that Rosy includes a pre-defined shortcut to the ChromeFrame module. You'll need to specify the path if you've removed the shortcut):\n\n```html\n\t<!--[if lte IE 9]>\n\t<script>\n\t\trequire([\"ChromeFrame\"]);\n\t</script>\n\t<![endif]-->\n```\n\n2. (Optional) If you're using [Caboose](https://github.com/ff0000/caboose), require the Caboose module from your `ie.scss` stylesheet.\n\n```scss\n@import \"rosy/modules/google-chrome-frame/chrome-frame\";\n```\n",
+  "readmeFilename": "README.md",
+  "_id": "rosy-google-chrome-frame@1.0.0",
+  "description": "1. Require ChromeFrame.js in your index file. For best results, wrap in an IE conditional (Note that Rosy includes a pre-defined shortcut to the ChromeFrame module. You'll need to specify the path if you've removed the shortcut):",
+  "commit": "bc9b1f7346751a2317f31d83deef61baf5c2250c",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosy-components/rosy-google-chrome-frame.git"
+  }
+}

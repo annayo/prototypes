@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700|Vollkorn);
+
+$font-baseline: 16;
+
+form {
+	width: 30%;
+	margin: 20px auto;
+	position: relative;
+
+	label,
+	fieldset {
+		color: #555;
+		display: block;
+		position: relative;
+		margin: 2px 0;
+		padding: 6px 12px;
+
+		strong,
+		legend {
+			font-family: 'Lobster Two', cursive;
+			font-size: (18em/$font-baseline);
+			line-height: (22em/$font-baseline);
+		}
+
+		label strong,
+		input {
+			font-family: 'Vollkorn', serif;
+			font-size: (14em/$font-baseline);
+		}
+
+		input,
+		select {
+			border: 1px solid #ddd;
+		}
+
+		input {
+			color: #555;
+			display: block;
+			background-color: #fff;
+			border-radius: 4px;
+			line-height: 1.5em;
+			padding: 5px;
+			width: 100%;
+		}
+
+		&.alert {
+
+			input,
+			select {
+				border-color: #ff0000;
+			}
+		}
+	}
+
+	.pull-inline {
+		display: inline;
+
+		input {
+			display: inline;
+			width: auto;
+		}
+	}
+
+	.tooltip {
+		@include transition(opacity 200ms);
+		opacity: 0;
+		cursor: pointer;
+
+		span {
+			color: #ff0000;
+			font-family: 'Ubuntu Mono', sans-serif;
+			font-size: (9em/$font-baseline);
+			background: #fff;
+			padding: 4px;
+		}
+
+		&.hide {
+			opacity: 0;
+		}
+
+		&.show {
+			opacity: 1;
+		}
+	}
+
+	.btn {
+		font-family: 'Lobster Two', cursive;
+		background-color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 0;
+		font-size: 100%;
+		text-align: center;
+		vertical-align: middle;
+		border: 1px solid #adadad;
+		border-radius: 4px;
+		user-select: none;
+
+		&:hover {
+			background-color: #ebebeb;
+		}
+	}
+
+	.btn-link {
+		font-weight: normal;
+		color: #428bca;
+		border: none;
+
+		&:hover {
+			background-color: transparent;
+			text-decoration: underline;
+		}
+	}
+
+	.btn-group {
+		border-top: 1px solid #ebebeb;
+		margin: 10px 0 0;
+		padding: 10px 0 0;
+		text-align: right;
+	}
+}

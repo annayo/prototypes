@@ -1,0 +1,80 @@
+#!/bin/bash
+chmod +x $HOME/.profile
+. $HOME/.profile
+
+CACHE_PREFIX="c-"
+BASE_PATH="/srv/active"
+STATIC_DIR="$BASE_PATH/collected-static"
+CACHE_DIR="$BASE_PATH/caches"
+MAX_KEEP=5
+
+VERSION_FILE="$BASE_PATH/VERSION"
+REQ_FILE="$BASE_PATH/REQ"
+
+restart_if_exists()
+{
+    ex=$(svcs | grep $1)
+    if [ -n "$ex" ]; then
+        c=$(svcs | grep $1 | grep maintenance)
+        if [ -n "$c" ]; then
+            svcadm clear $1
+        fi
+        svcadm restart $1
+    fi
+}
+
+purge_cache_directories()
+{
+    # Delete the oldest directories until there are only max left.
+    max=$1
+    while [ "$(ls $CACHE_DIR | wc -l)" -gt $max ]; do
+        list=$(find "$CACHE_DIR" -maxdepth 1 -mindepth 1 -type d -printf '%T@ %p:\n' \
+            2>/dev/null | sort -n)
+        line=$(echo $list | cut -s -d ":" -f 1)
+        dir="${line#* }"
+        rm -rf $dir
+    done
+
+    # Delete broken links
+    find -L $STATIC_DIR -maxdepth 1 -type l -exec rm "{}" \;
+}
+
+copy_lastest_to_cache_dir()
+{
+    hash_dir=$1
+    mkdir -p "$CACHE_DIR/$hash_dir"
+    rsync -rpog --delete "$STATIC_DIR/" "$CACHE_DIR/$hash_dir"
+    ln -sf "$CACHE_DIR/$hash_dir/" "$STATIC_DIR/$hash_dir"
+}
+
+update_virtualenv()
+{
+    reqrev=$(git log --pretty=format:"%h" -n 1 $1 -- deploy/requirements)
+    touch "$REQ_FILE"
+    lastreq=$(cat "$REQ_FILE")
+    if [ "$reqrev" != "$lastreq" ]; then
+        sh "$BASE_PATH/scripts/setup.sh" production
+        echo $reqrev > $REQ_FILE
+    fi
+}
+
+refname=unset
+while read oldrev newrev ref
+do
+    refname=$ref
+done
+branch=${refname#*/*/}
+echo "Checking out $branch"
+GIT_WORK_TREE=$BASE_PATH git checkout -f $branch
+
+staticrev=$(git log --pretty=format:"%h" -n 1 $branch -- project/static)
+echo $staticrev > $VERSION_FILE
+
+copy_lastest_to_cache_dir "$CACHE_PREFIX$staticrev"
+update_virtualenv $branch
+
+restart_if_exists gunicorn
+restart_if_exists nginx
+
+# Purge old static
+purge_cache_directories $MAX_KEEP
