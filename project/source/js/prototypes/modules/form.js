@@ -224,7 +224,7 @@ define(
 
 					$tooltip.html(html).addClass("show");
 				} else {
-					$container.removeClass("alert");
+					$container.removeClass("error");
 					$tooltip.removeClass("show");
 				}
 			},

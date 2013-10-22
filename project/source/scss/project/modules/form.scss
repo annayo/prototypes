@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:700|Vollkorn);
 
 $font-baseline: 16;
+$error-color: #D52222;
 
 form {
 	width: 30%;
@@ -12,8 +13,7 @@ form {
 		color: #555;
 		display: block;
 		position: relative;
-		margin: 2px 0;
-		padding: 6px 12px;
+		padding: 10px 0;
 
 		strong,
 		legend {
@@ -33,6 +33,14 @@ form {
 			border: 1px solid #ddd;
 		}
 
+		label {
+			position: static;
+		}
+
+		legend {
+			padding-top: 10px;
+		}
+
 		input {
 			color: #555;
 			display: block;
@@ -43,11 +51,11 @@ form {
 			width: 100%;
 		}
 
-		&.alert {
+		&.error {
 
 			input,
 			select {
-				border-color: #ff0000;
+				border-color: $error-color;
 			}
 		}
 	}
@@ -65,17 +73,24 @@ form {
 		//@include transition(opacity 200ms);
 		opacity: 0;
 		cursor: pointer;
+		position: absolute;
+		left: -100px;
+		bottom: 15px;
+		padding-right: 8px;
 
 		span {
-			color: #ff0000;
+			background: #fff;
+			color: $error-color;
 			font-family: 'Ubuntu Mono', sans-serif;
 			font-size: (9em/$font-baseline);
-			background: #fff;
-			padding: 4px;
 		}
 
-		&.hide {
-			opacity: 0;
+		&:after {
+			@include triangle(right, $error-color, 3px);
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 7px;
 		}
 
 		&.show {
