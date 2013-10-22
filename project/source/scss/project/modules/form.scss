@@ -1,5 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:700|Vollkorn);
 
+// TEMP why does caboose:dev not compile caboose and mixins?
+// Import Caboose
+@import "caboose";
+// Import project mixins
+@import "mixins/mixins";
+
 $font-baseline: 16;
 $error-color: #D52222;
 
@@ -70,7 +76,7 @@ form {
 	}
 
 	.tooltip {
-		//@include transition(opacity 200ms);
+		@include transition(opacity 200ms);
 		opacity: 0;
 		cursor: pointer;
 		position: absolute;
